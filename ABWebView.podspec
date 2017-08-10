@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name             = 'ABWebView'
   s.version          = '0.1'
-  s.summary          = 'This is pass code view controller which can be used for getting secure entry from users.'
+  s.summary          = 'This is web view controller which can be used for loading URL using WKWebView.'
   s.description      = <<-DESC
 			 A utility control which is using fast WKWebView which is introduced in iOS8. Just set URL to load and it will do the rest. Very easy to implement.
                        DESC

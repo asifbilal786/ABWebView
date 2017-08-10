@@ -1,5 +1,5 @@
-# ABPasscode
-A utility control with built in functionality of pass code view that takes inputs in the form secure entry from user. To get the call back methods, you must implement it’s delegate methods to get the code, when user finish entering the passcode.
+# ABWebView
+A utility control which is using fast WKWebView which is introduced in iOS8. Just set URL to load and it will do the rest. Very easy to implement.
 
 ## Demo
 ![gif1](https://raw.githubusercontent.com/asifbilal786/ABPasscodeViewController/screenshots/ABPasscode.gif)
@@ -13,14 +13,14 @@ A utility control with built in functionality of pass code view that takes input
 ## Adding ABPasscodeViewController to your project
 
 ### METHOD 1:
-1. Add a pod entry for `ABPasscode` to your Podfile
+1. Add a pod entry for `ABWebView` to your Podfile
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'ABPasscode', '~> 0.1'
+pod 'ABWebView', '~> 0.1'
 ``` 
 
 2. Install the pod(s) by running `pod install`.
@@ -28,7 +28,7 @@ pod 'ABPasscode', '~> 0.1'
 ### MEHTOD 2: (Source files)
 Alternatively, you can directly add all files under the folder Core to your project.
 
-1. Download the [latest code version](https://github.com/asifbilal786/ABPasscodeViewController/archive/master.zip) or add the repository as a git submodule to your git-tracked project.
+1. Download the [latest code version](https://github.com/asifbilal786/ABWebView/archive/master.zip) or add the repository as a git submodule to your git-tracked project.
 2. Open your Xcode project, then drag and drop source directory onto your project. Make sure to select Copy items when asked if you extracted the code archive outside of your project.
  
 
@@ -45,23 +45,9 @@ navigationController?.pushViewController(passcodeVC, animated: true)
 And then call the delegate functions for different event.
 
 ```
-extension ViewController: PasscodeViewDelegate {
-    
-    func passcodeView(_ passcodeView: PasscodeViewController, didEnteredCode code: String) {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            
-            self.navigationController?.popViewController(animated: true)
-            self.lblPasscode.text = "Entered Code: \(code)"
-        }
-        
-    }
-    
-    func passcodeView(_ passcodeView: PasscodeViewController, didTapResendButton resendButton: UIButton) {
-        
-    }
-    
-}
+let webViewController = ABWebViewController()
+webViewController.URLToLoad = "https://apple.com"
+navigationController?.pushViewController(webViewController, animated: true)
 ```
 
 See example projects for detail.
