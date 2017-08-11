@@ -1,6 +1,9 @@
 # ABWebView
 A utility control which is using fast WKWebView in replacement of UIWebView which is introduced in iOS8. Just set URL to load and it will do the rest. Very easy to implement. This is very useful when loading 'Terms of Services' OR 'Privacy Policy' web pages.
 
+## Demo
+![Alt text](http://i.imgur.com/pwTgDH8.gifv "")
+
 ## Requirements
 
 - iOS 8 and above.
