@@ -38,9 +38,16 @@ Create instance of ABWebViewConroller and set URLToLoad.
 
 ```
 let webViewController = ABWebViewController()
+
+// Configure WebViewController
 webViewController.URLToLoad = "https://apple.com"
-navigationController?.pushViewController(webViewController, animated: true)
-```
+
+// Customize UI of progressbar
+webViewController.progressTintColor = UIColor.red
+webViewController.trackTintColor = UIColor.brown
+
+
+navigationController?.pushViewController(webViewController, animated: true)```
 
 See example projects for detail.
 
