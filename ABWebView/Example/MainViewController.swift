@@ -24,7 +24,15 @@ class MainViewController: UIViewController {
     @IBAction func loadWebViewController(_ sender: Any) {
         
         let webViewController = ABWebViewController()
+        
+        // Configure WebViewController
         webViewController.URLToLoad = "https://apple.com"
+        
+        // Customize UI of progressbar
+        webViewController.progressTintColor = UIColor.red
+        webViewController.trackTintColor = UIColor.brown
+        
+        
         navigationController?.pushViewController(webViewController, animated: true)
         
     }

@@ -17,7 +17,9 @@ class ABWebViewController: UIViewController {
     fileprivate let keyEstimateProgress = "estimatedProgress"
     
     
-    var URLToLoad: String = ""
+    open var URLToLoad: String = ""
+    open var progressTintColor : UIColor?
+    open var trackTintColor : UIColor?
     fileprivate var webView: WKWebView
     
     @IBOutlet fileprivate weak var loadingProgress: UIProgressView!
@@ -61,9 +63,14 @@ class ABWebViewController: UIViewController {
     
     fileprivate func viewConfigurations() {
         
+        
+        //These are the changes for UnderTopBars & UnderBottomBars
         edgesForExtendedLayout = []
         extendedLayoutIncludesOpaqueBars = false
         automaticallyAdjustsScrollViewInsets = false
+        
+        loadingProgress.trackTintColor = trackTintColor
+        loadingProgress.progressTintColor = progressTintColor
         
         webViewContainer.addSubview(webView)
         webView.translatesAutoresizingMaskIntoConstraints = false
