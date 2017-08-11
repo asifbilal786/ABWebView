@@ -47,7 +47,8 @@ webViewController.progressTintColor = UIColor.red
 webViewController.trackTintColor = UIColor.brown
 
 
-navigationController?.pushViewController(webViewController, animated: true)```
+navigationController?.pushViewController(webViewController, animated: true)
+```
 
 See example projects for detail.
 
