@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
         let webViewController = ABWebViewController()
         
         // Configure WebViewController
+        webViewController.title = "Web View Controller"
         webViewController.URLToLoad = "https://apple.com"
         
         // Customize UI of progressbar
