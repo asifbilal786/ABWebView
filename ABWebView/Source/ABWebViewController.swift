@@ -158,7 +158,9 @@ extension ABWebViewController: WKNavigationDelegate {
             
             decisionHandler(WKNavigationActionPolicy.cancel)
         }
-        
-        decisionHandler(.allow)
+        else
+        {
+            decisionHandler(.allow)
+        }
     }
 }
