@@ -75,7 +75,7 @@ class ABWebViewController: UIViewController {
         webViewContainer.addSubview(webView)
         webView.translatesAutoresizingMaskIntoConstraints = false
         
-        let attributes: [NSLayoutAttribute] = [.top, .bottom, .right, .left]
+        let attributes: [NSLayoutConstraint.Attribute] = [.top, .bottom, .right, .left]
         
         NSLayoutConstraint.activate(attributes.map {
             NSLayoutConstraint(item: webView, attribute: $0, relatedBy: .equal, toItem: webViewContainer, attribute: $0, multiplier: 1, constant: 0)
@@ -107,7 +107,7 @@ class ABWebViewController: UIViewController {
     fileprivate func showAlert(_ title: String, message: String) {
         let alertController: UIAlertController = UIAlertController(title: title,
                                                                    message: message,
-                                                                   preferredStyle: UIAlertControllerStyle.alert)
+                                                                   preferredStyle: .alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertController, animated: true, completion: nil)
