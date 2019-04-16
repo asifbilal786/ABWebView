@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 s.name             = 'ABWebView'
-s.version          = '0.1'
+s.version          = '0.2'
 s.summary          = 'This is web view controller which can be used for loading URL using WKWebView.'
 s.description      = <<-DESC
 A utility control which is using fast WKWebView in replacement of UIWebView which is introduced in iOS8. Just set URL to load and it will do the rest. Very easy to implement. This is very useful when loading 'Terms of Services' OR 'Privacy Policy' web pages.
